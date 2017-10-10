@@ -1,4 +1,4 @@
-# jungle
+# Jungle
 
 > Jungle is a management dashboard powered by Vue.js and Firebase
 
