@@ -19,7 +19,7 @@
   </div>
 
 </template>
-<script> 
+<script>
 
  import firebase from 'firebase'
 

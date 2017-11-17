@@ -1,31 +1,27 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
-import firebase from 'firebase'
+import Vue from "vue";
+import App from "./App";
+import VueFire from "vuefire";
+import router from "./router";
+import firebase from "firebase";
+import { config } from "./config/config";
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+Vue.use(VueFire);
 
-let app;
-let config = {
-    apiKey: "AIzaSyAo-IvF63iCWi6zpPgIdgLNcyPISKdt2RE",
-    authDomain: "jungle-637d8.firebaseapp.com",
-    databaseURL: "https://jungle-637d8.firebaseio.com",
-    projectId: "jungle-637d8",
-    storageBucket: "jungle-637d8.appspot.com",
-    messagingSenderId: "671808464311"
-  };
-
-firebase.initializeApp(config)
-firebase.auth().onAuthStateChanged(function(user) {
-  if (!app) {
-    /* eslint-disable no-new */
-    app = new Vue({
-      el: '#app',
-      template: '<App/>',
-      components: { App },
-      router
-    })
-  }
+const app = new Vue({
+    router,
+    created() {
+        firebase.initializeApp(config);
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                this.$router.push("/hello");
+            } else {
+                this.$router.push("/login");
+            }
+        });
+    },
+    el: "#app",
+    render: h => h(App)
 });
