@@ -13,7 +13,6 @@ Vue.use(VueFire);
 const app = new Vue({
     router,
     created() {
-        firebase.initializeApp(config);
         firebase.auth().onAuthStateChanged(user => {
             if (user) {
                 this.$router.push("/hello");
