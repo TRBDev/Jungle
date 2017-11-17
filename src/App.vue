@@ -1,13 +1,20 @@
+
 <template>
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <vertical-menu/>
   </div>
 </template>
 
 <script>
+import VerticalMenu from '@/components/shared/VerticalMenu'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    VerticalMenu
+  } 
 }
 </script>
 
