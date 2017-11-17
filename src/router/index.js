@@ -22,6 +22,7 @@ let router = new Router({
       name: 'Login',
       component: Login
     },
+   
     {
       path: '/hello',
       name: 'Hello',
