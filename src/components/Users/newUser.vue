@@ -3,18 +3,20 @@
  <div class="login">
    <div class="container">
      <div class="row">
-       <div class="col-lg-4"></div>
 
-<form class="col-lg-4 col-xs-12 center-block text-left">
-      <h3>Iniciar Sesión</h3>
-
+<form class="col-lg-4 col-xs-12 text-left">
+      <h3>Crear nuevo usuario</h3>
+    <div class="form-group">
+    <label for="exampleInputEmail1">Nombre / Nick</label>
+    <input  type="email" class="form-control"  id="nombre" aria-describedby="nombrelHelp" v-model="nombre" placeholder="Nombre">
+  </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
-    <input  type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" v-model="email" placeholder="Email">
+    <input  type="email" class="form-control"  id="email" aria-describedby="emailHelp" v-model="email" placeholder="Email">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Contraseña</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" v-model="password" placeholder="Contraseña">
+    <input type="password" class="form-control" id="password" v-model="password" placeholder="Contraseña">
   </div>
   <div class="form-check">
     <label class="form-check-label">
@@ -25,9 +27,9 @@
 
 
   </div>
-  <button type="submit"  v-on:click="signIn" class="btn btn-primary">Entrar</button>
+  <button type="submit"  v-on:click="signIn" class="btn btn-primary">Añadir</button>
 </form>
-       <div class="col-lg-4"></div>
+       <div class="col-lg-8"></div>
 
 
 

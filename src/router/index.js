@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 import Hello from "@/components/Hello";
 import Login from "@/components/Login";
+import User from "@/components/Users/newUser";
 import Products from '@/components/Products/index';
 import firebase from "firebase";
 
@@ -23,6 +24,14 @@ let router = new Router({
             path: "/hello",
             name: "Hello",
             component: Hello,
+            meta: {
+                requiresAuth: true
+            }
+        },
+        {
+            path: "/newUser",
+            name: "newUser",
+            component: User,
             meta: {
                 requiresAuth: true
             }

@@ -9,9 +9,14 @@
 </template>
 
 <script>
+   import vertical from "./shared/VerticalMenu.vue";
+
+/*************** DEBERIAMOS HACER EL IMPORT DONDE SE NECESITE ************** */
 export default {
   name: "HelloWorld",
+  
   data() {
+
     return {
       msg: "Welcome to Your Vue.js App"
     };

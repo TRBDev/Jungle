@@ -56,17 +56,26 @@
                   </a>
                   </li>
 
-                 <li>
+                <li data-toggle="collapse" data-target="#user" class="collapsed">
                   <a href="#">
-                  <i class="fa fa-users fa-lg"></i> Users
+                  <i class="fa fa-users fa-lg"></i>Usuarios<span class="arrow"></span>
                   </a>
                 </li>
+                <ul class="sub-menu collapse" id="user">
+                  <li> <router-link to="/newUser">Añadir</router-link></li>
+                  <li>Modificar</li>
+                  <li>Eliminar</li>
+                </ul>
             </ul>
      </div>
 </div>
 </div>
 </template>
 <script>
+
+
+
+
 export default {
   name: "VerticalMenu"
 };
