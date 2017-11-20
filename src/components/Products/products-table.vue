@@ -1,29 +1,38 @@
 <template>
   <div>
-    <table class="ui celled padded table">
-      <thead>
-        <tr class="center aligned">
-        <th>Nombre</th>
-        <th>Categoría</th>
-        <th>Fabricante</th>
-        <th>Precio</th>
-      </tr></thead>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Categoría</th>
+          <th scope="col">Fabricante</th>
+          <th scope="col">Precio</th>
+          <th scope="col">¿En stock?</th>
+        </tr>
+      </thead>
       <tbody>
-        <tr class="center aligned" v-for="(product, index) in products" :key="index">
-          <td class="center aligned">
-            {{product.nombre}}
+        <tr v-for="(product, index) in products" :key="index">
+          <th scope="row">{{index}}</th>
+          <td>{{product.nombre}}</td>
+          <td>{{product.categoria}}</td>
+          <td>{{product.fabricante}}</td>
+          <td>{{product.precio}} EUR</td>
+          <td v-if="product.stock > 0">
+            <span>
+              <i class="fa fa-check"></i>
+            </span>
           </td>
-          <td>
-            {{product.categoria}}
+          <td v-else>
+            <span>
+              <i class="fa fa-times"></i>
+            </span>
           </td>
-          <td class="center aligned">
-            <a href="#">{{product.fabricante}}</a>
-          </td>
-          <td>{{product.precio}}€</td>
         </tr>
       </tbody>
-  </table>
-</div>
+    </table>
+
+  </div>
 </template>
 
 <script>
@@ -33,6 +42,8 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
+.fa-check {
+  color: green;
+}
 </style>

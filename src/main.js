@@ -11,16 +11,16 @@ Vue.config.productionTip = false;
 Vue.use(VueFire);
 
 const app = new Vue({
-    router,
-    created() {
-        firebase.auth().onAuthStateChanged(user => {
-            if (user) {
-                this.$router.push("/hello");
-            } else {
-                this.$router.push("/login");
-            }
-        });
-    },
-    el: "#app",
-    render: h => h(App)
+  router,
+  created() {
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.$router.push("/hello");
+      } else {
+        this.$router.push("/login");
+      }
+    });
+  },
+  el: "#app",
+  render: h => h(App)
 });

@@ -3,9 +3,9 @@
 <div class="nav-side-menu">
     <div class="brand"><img src="../../assets/logo.png"></div>
     <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-  
+
         <div class="menu-list">
-  
+
             <ul id="menu-content" class="menu-content collapse out">
                 <li>
                   <a href="#">
@@ -32,7 +32,7 @@
 
                 <li data-toggle="collapse" data-target="#service" class="collapsed">
                   <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
-                </li>  
+                </li>
                 <ul class="sub-menu collapse" id="service">
                   <li>New Service 1</li>
                   <li>New Service 2</li>
@@ -67,14 +67,9 @@
 </div>
 </template>
 <script>
-
 export default {
-  name: 'VerticalMenu',
-  mounted: function () {
-    $(".ui.dropdown").dropdown();
-  }
-
-}
+  name: "VerticalMenu"
+};
 </script>
 
 <style>
@@ -108,7 +103,7 @@ export default {
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
-  /*    
+  /*
     .collapsed{
        .arrow:before{
                  font-family: FontAwesome;
@@ -213,7 +208,6 @@ export default {
     font-size: 22px;
     padding-left: 20px;
     line-height: 50px !important;
-    
   }
 }
 @media (min-width: 767px) {

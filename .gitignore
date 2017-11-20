@@ -14,3 +14,5 @@ yarn-error.log*
 *.sln
 /src/config
 src/config/config.js
+/typings
+/typings.json

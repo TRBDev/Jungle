@@ -1,26 +1,33 @@
 
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-    <vertical-menu/>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2">
+          <vertical-menu/>
+        </div>
+        <div class="col-10">
+          <router-view/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import VerticalMenu from '@/components/shared/VerticalMenu'
+import VerticalMenu from "@/components/shared/VerticalMenu";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     VerticalMenu
-  } 
-}
+  }
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

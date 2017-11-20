@@ -1,7 +1,7 @@
 <template>
   <div class="products">
     <h1>Products</h1>
-    <products-table :products="productos"/>
+    <products-table :products="productos" />
   </div>
 </template>
 
@@ -13,11 +13,6 @@ export default {
   name: "Products",
   components: {
     ProductsTable
-  },
-  data() {
-    return {
-      productos: {}
-    };
   },
   firebase: {
     productos: {
