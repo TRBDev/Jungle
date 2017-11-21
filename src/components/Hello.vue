@@ -9,7 +9,6 @@
 </template>
 
 <script>
-   import vertical from "./shared/VerticalMenu.vue";
 
 /*************** DEBERIAMOS HACER EL IMPORT DONDE SE NECESITE ************** */
 export default {
