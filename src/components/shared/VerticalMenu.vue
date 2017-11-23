@@ -58,8 +58,12 @@
 
                 <li>
                  <router-link to="/users"> <a href="#">
-                  <i class="fa fa-users fa-lg"></i> Añadir</span>
+                  <i class="fa fa-users fa-lg"></i> Añadir
                   </a></router-link>
+                </li>
+                <li v-on:click="logout">
+                   <a href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Cerrar Sesión</a>
+
                 </li>
               
             </ul>
@@ -68,12 +72,20 @@
 </div>
 </template>
 <script>
+import firebase from 'firebase';
 
 
 
 
 export default {
-  name: "VerticalMenu"
+  name: "VerticalMenu",
+  methods:{
+    logout: function(){
+      firebase.auth().signOut().then(() => {
+        this.$router.replace('login')
+      })
+    }
+  }
 };
 </script>
 

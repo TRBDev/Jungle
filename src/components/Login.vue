@@ -5,16 +5,16 @@
      <div class="row">
        <div class="col-lg-4"></div>
 
-<form class="col-lg-4 col-xs-12 center-block text-left">
+<div class="col-lg-4 col-xs-12 center-block text-left">
       <h3>Iniciar Sesión</h3>
 
   <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
-    <input  type="email" class="form-control"  id="exampleInputEmail1" aria-describedby="emailHelp" v-model="email" placeholder="Email">
+    <input  type="email" class="form-control" v-model="email" placeholder="Email">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Contraseña</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" v-model="password" placeholder="Contraseña">
+    <input type="password" class="form-control"  v-model="password" placeholder="Contraseña">
   </div>
   <div class="form-check">
    
@@ -23,7 +23,7 @@
 
   </div>
   <button type="submit"  v-on:click="signIn" class="btn btn-primary">Entrar</button>
-</form>
+</div>
        <div class="col-lg-4"></div>
 
 
@@ -35,7 +35,7 @@
 </template>
 <script>
 
- import firebase from 'firebase'
+ import firebase from 'firebase';
 
   export default {
     name: 'login',
@@ -45,14 +45,14 @@
         password: ''
       }
     },
-    methods: {
+   methods: {
       signIn: function() {
         firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
           (user) => {
             this.$router.replace('hello')
           },
           (err) => {
-            alert('Error al acceder: ' + err.message)
+            alert('Oops. ' + err.message)
           }
         );
       }

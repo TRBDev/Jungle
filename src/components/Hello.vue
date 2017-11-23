@@ -5,7 +5,6 @@
     <ul>
       <li><router-link to="/products">Products</router-link></li>
     </ul>
-    <button class="btn btn-danger" v-on:click="logout">Cerrar Sesión</button>
   </div>
 </template>
 
