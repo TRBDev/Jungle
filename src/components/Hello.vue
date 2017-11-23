@@ -5,10 +5,12 @@
     <ul>
       <li><router-link to="/products">Products</router-link></li>
     </ul>
+    <button class="btn btn-danger" v-on:click="logout">Cerrar Sesión</button>
   </div>
 </template>
 
 <script>
+import firebase from 'firebase';
 
 /*************** DEBERIAMOS HACER EL IMPORT DONDE SE NECESITE ************** */
 export default {
@@ -19,6 +21,13 @@ export default {
     return {
       msg: "Welcome to Your Vue.js App"
     };
+  },
+  methods:{
+    logout: function(){
+      firebase.auth().signOut().then(() => {
+        this.$router.replace('login')
+      })
+    }
   }
 };
 </script>

@@ -56,16 +56,12 @@
                   </a>
                   </li>
 
-                <li data-toggle="collapse" data-target="#user" class="collapsed">
-                  <a href="#">
-                  <i class="fa fa-users fa-lg"></i>Usuarios<span class="arrow"></span>
-                  </a>
+                <li>
+                 <router-link to="/users"> <a href="#">
+                  <i class="fa fa-users fa-lg"></i> Añadir</span>
+                  </a></router-link>
                 </li>
-                <ul class="sub-menu collapse" id="user">
-                  <li> <router-link to="/newUser">Añadir</router-link></li>
-                  <li>Modificar</li>
-                  <li>Eliminar</li>
-                </ul>
+              
             </ul>
      </div>
 </div>

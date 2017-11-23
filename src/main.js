@@ -6,6 +6,7 @@ import VueFire from "vuefire";
 import router from "./router";
 import firebase from "firebase";
 import { config } from "./config/config";
+import "./assets/css/main.css";
 
 Vue.config.productionTip = false;
 Vue.use(VueFire);

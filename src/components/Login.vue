@@ -17,10 +17,7 @@
     <input type="password" class="form-control" id="exampleInputPassword1" v-model="password" placeholder="Contraseña">
   </div>
   <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" v-on:click="remember" class="form-check-input">
-     Recuérdame
-    </label>
+   
 
 
 

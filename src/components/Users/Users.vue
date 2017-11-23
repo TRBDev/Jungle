@@ -1,6 +1,9 @@
 <template>
 
  <div class="login">
+
+
+
    <div class="container">
      <div class="row">
 
@@ -18,15 +21,7 @@
     <label for="exampleInputPassword1">Contraseña</label>
     <input type="password" class="form-control" id="password" v-model="password" placeholder="Contraseña">
   </div>
-  <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" v-on:click="remember" class="form-check-input">
-     Recuérdame
-    </label>
 
-
-
-  </div>
   <button type="submit"  v-on:click="signIn" class="btn btn-primary">Añadir</button>
 </form>
        <div class="col-lg-8"></div>
