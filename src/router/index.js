@@ -1,55 +1,15 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue'
+import Router from 'vue-router'
+import HelloWorld from '@/components/HelloWorld'
 
-import Hello from "@/components/Hello";
-import Login from "@/components/Login";
-import User from "@/components/Users/Users";
-import Products from '@/components/Products/index';
-import firebase from "firebase";
+Vue.use(Router)
 
-Vue.use(Router);
-
-let router = new Router({
-    mode: "history",
-    routes: [{
-            path: "/",
-            redirect: "/login"
-        },
-        {
-            path: "/login",
-            name: "Login",
-            component: Login
-        },
-        {
-            path: "/hello",
-            name: "Hello",
-            component: Hello,
-            meta: {
-                requiresAuth: true
-            }
-        },
-        {
-            path: "/users",
-            name: "users",
-            component: User,
-            meta: {
-                requiresAuth: true
-            }
-        },
-        {
-            path: "/products",
-            name: "Products",
-            component: Products
-        }
-    ]
-});
-
-router.beforeEach((to, from, next) => {
-    let currentUser = firebase.auth().currentUser;
-    let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-
-    if (requiresAuth && !currentUser) next("login");
-    else next();
-});
-
-export default router;
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld
+    }
+  ]
+})

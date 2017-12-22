@@ -1,0 +1,11 @@
+{
+  "globalDependencies": {
+    "firebase": "registry:dt/firebase#2.4.1+20160510002910",
+    "node": "registry:dt/node#7.0.0+20170322231424",
+    "vue": "registry:dt/vue#1.0.21+20160929090511"
+  },
+  "globalDevDependencies": {
+    "ora": "registry:dt/ora#0.3.0+20161119044246",
+    "webpack-merge": "registry:dt/webpack-merge#0.0.0+20161121205806"
+  }
+}

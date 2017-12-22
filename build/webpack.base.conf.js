@@ -9,6 +9,7 @@ function resolve (dir) {
 }
 
 module.exports = {
+  context: path.resolve(__dirname, '../'),
   entry: {
     app: './src/main.js'
   },
@@ -22,7 +23,6 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
     }
   },
@@ -36,7 +36,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        exclude: /node_modules/
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

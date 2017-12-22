@@ -1,6 +1,6 @@
-# Jungle
+# jungle
 
-> Jungle is a management dashboard powered by Vue.js and Firebase
+> A Dashboard powered with Vue + Firebase + Vuetify
 
 ## Build Setup
 
